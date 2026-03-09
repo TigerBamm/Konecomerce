@@ -1,13 +1,19 @@
-import Navbar from './components/Navbar';
+ clothing-shop
+import Navbar from "./components/Navbar";
 import Homepages from './Pages/Homepages';
 import Contact from './Pages/Contact';
 import Aboutus from './Pages/Aboutus';
 import Shop from './Pages/Shop';
 import CardDetail from './Pages/CardDetail';
 
+import React from "react";
+import Navbar from "./components/Navbar";
+
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
+clothing-shop
     
     <BrowserRouter>
       <Navbar />
@@ -23,3 +29,13 @@ function App() {
 }
 
 export default App
+
+    <div>
+      <Navbar />
+      <h1 className="text-4xl text-red-500 font-bold">Tailwind Working!</h1>
+    </div>
+  );
+}
+
+export default App;
+

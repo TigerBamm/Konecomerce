@@ -1,5 +1,7 @@
 import React from 'react'
+ clothing-shop
 import { NavLink } from 'react-router-dom'
+import Navbar from "./components/Navbar";
 
 function Navbar() {
   return (
@@ -19,6 +21,19 @@ function Navbar() {
           <li><NavLink to={"/shop"} className="hover:text-indigo-600">Shop</NavLink></li>
           <li><NavLink to={"/contact"} className="hover:text-indigo-600">Contact</NavLink></li>
           <li><NavLink to={"/about"} className="hover:text-indigo-600">AboutUs</NavLink></li>
+
+import NavLink from './NavLink'
+
+
+function Navbar() {
+  return (
+    <div>
+      <nav>
+        <ul>
+            <li><NavLink to="/home">Home</NavLink></li>
+            <li><NavLink to="/products">Products</NavLink></li>
+            <li><NavLink to="/about">About</NavLink></li>
+
         </ul>
 
         <div className='flex justify-between items-center gap-4'>
