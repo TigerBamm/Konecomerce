@@ -1,41 +1,39 @@
- clothing-shop
+
 import Navbar from "./components/Navbar";
 import Homepages from './Pages/Homepages';
-import Contact from './Pages/Contact';
-import Aboutus from './Pages/Aboutus';
-import Shop from './Pages/Shop';
+import Women from "./Pages/Women";
+import Kid from "./Pages/Kid";
+import Men from "./Pages/Men";
 import CardDetail from './Pages/CardDetail';
-
-import React from "react";
-import Navbar from "./components/Navbar";
-
-
+import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+
+
 function App() {
   return (
-clothing-shop
-    
-    <BrowserRouter>
+<div>
+  
+  <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepages />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<Aboutus />} />
-        <Route path="/shop" element={<Shop />} />
+        <Route path="/women" element={<Women />} />
+        <Route path="/kid" element={<Kid />} />
+        <Route path="/men" element={<Men />} />
         <Route path="/card-detail/:id" element={<CardDetail />} />
       </Routes>
     </BrowserRouter>
+    <Footer />
+</div>
+    
+    
+
+     
   )
 }
 
 export default App
 
-    <div>
-      <Navbar />
-      <h1 className="text-4xl text-red-500 font-bold">Tailwind Working!</h1>
-    </div>
-  );
-}
 
-export default App;
 
