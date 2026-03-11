@@ -1,5 +1,5 @@
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React from "react";
+import { useParams, Link } from "react-router-dom";
 
 function CardDetail() {
   const { id } = useParams();
@@ -62,63 +62,66 @@ function CardDetail() {
 
   if (!product) {
     return (
-      <div className="h-screen flex items-center justify-center bg-zinc-900 text-white">
+      <div className="h-screen flex items-center justify-center  bg-zinc-900 text-white">
         <div className="text-center">
           <h2 className="text-2xl font-light mb-4">Product not found</h2>
-          <Link to="/" className="text-blue-400 underline">Back to Gallery</Link>
+          <Link to="/" className="text-blue-400 underline">
+            Back to Gallery
+          </Link>
         </div>
       </div>
     );
   }
 
   return (
-    <div className='min-h-screen bg-zinc-950 text-zinc-100 flex items-center justify-center p-6'>
-      <div className='max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 bg-zinc-900/50 border border-white/10 p-8 rounded-3xl backdrop-blur-xl shadow-2xl'>
-        
-       
-        <div className='relative group overflow-hidden rounded-2xl bg-zinc-800 flex justify-center items-center aspect-square'>
-          <img 
-            className='w-full h-full transition-transform duration-700 ' 
-            src={product.image} 
-            alt={product.Name} 
+    <div className="min-h-screen bg-zinc-950 text-zinc-100 flex items-center justify-center p-6">
+      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 bg-zinc-900/50 border border-white/10 p-8 rounded-3xl backdrop-blur-xl shadow-2xl">
+        <div className="relative group overflow-hidden rounded-2xl bg-zinc-800 flex justify-center items-center aspect-square">
+          <img
+            className="w-full h-full transition-transform duration-700 "
+            src={product.image}
+            alt={product.Name}
           />
-          <div className='absolute inset-0 bg-gradient-to-t from-black/40 to-transparent'></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
         </div>
 
         {/* Right Side: Clean Typography and Modern UI Elements */}
-        <div className='flex flex-col justify-center'>
+        <div className="flex flex-col justify-center">
           <nav className="text-xs uppercase tracking-[0.2em] text-zinc-500 mb-4">
-            Collection / {product.id < 4 ? 'Premium' : 'Standard'}
+            Collection / {product.id < 4 ? "Premium" : "Standard"}
           </nav>
-          
-          <h1 className='text-5xl font-extrabold tracking-tight mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-500'>
+
+          <h1 className="text-5xl font-extrabold tracking-tight mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-500">
             {product.Name}
           </h1>
-          
-          <p className='text-3xl font-light text-zinc-300 mb-6'>
+
+          <p className="text-3xl font-light text-zinc-300 mb-6">
             {product.price}
           </p>
 
           <hr className="border-zinc-800 mb-6" />
 
           <div className="mb-8">
-            <h3 className="text-sm font-semibold uppercase text-zinc-400 mb-2">Description</h3>
-            <p className='text-zinc-400 leading-relaxed italic'>
-              {product.description || "Designed for the modern professional. This piece combines aesthetic purity with functional excellence, ensuring you stand out while staying efficient."}
+            <h3 className="text-sm font-semibold uppercase text-zinc-400 mb-2">
+              Description
+            </h3>
+            <p className="text-zinc-400 leading-relaxed italic">
+              {product.description ||
+                "Designed for the modern professional. This piece combines aesthetic purity with functional excellence, ensuring you stand out while staying efficient."}
             </p>
           </div>
 
           <div className="flex flex-col gap-4">
-            <button 
-              className='w-full py-4 bg-white text-black hover:bg-zinc-200 transition-colors duration-300 font-bold rounded-xl active:scale-[0.98]' 
-              type='button'
+            <button
+              className="w-full py-4 bg-white text-black hover:bg-zinc-200 transition-colors duration-300 font-bold rounded-xl active:scale-[0.98]"
+              type="button"
             >
               Add to Cart
             </button>
-            
-            <button 
-              className='w-full py-4 bg-transparent border border-zinc-700 hover:border-zinc-500 text-zinc-300 transition-all duration-300 font-medium rounded-xl' 
-              type='button'
+
+            <button
+              className="w-full py-4 bg-transparent border border-zinc-700 hover:border-zinc-500 text-zinc-300 transition-all duration-300 font-medium rounded-xl"
+              type="button"
             >
               Save to Wishlist
             </button>

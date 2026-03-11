@@ -5,7 +5,7 @@ function Homepages() {
   return (
     <div>
          <div 
-        className='relative bg-cover bg-center  shadow-lg w-full h-[450px] flex justify-center items-center'
+        className='relative bg-cover bg-center  shadow-lg w-full h-full flex justify-center items-center'
         style={{ backgroundImage: `url("https://i.pinimg.com/1200x/7c/a1/13/7ca113b5a7d018870e27ff0465caaae0.jpg")` }}>
        
         <div className="absolute inset-0 bg-black/30"></div>
